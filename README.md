@@ -1,6 +1,9 @@
 # Bursa Nöbetçi Eczaneler Uygulaması
 Bu proje, Bursa şehrindeki nöbetçi eczaneleri görüntülemek, harita üzerinde göstermek ve sağlık ile ilgili faydalı bilgiler sunmak için geliştirilmiştir.
-![banner-resmi]()
+![banner-resmi](https://github.com/emhnkrty/uretken/blob/main/public/assets/Uygulama-gorseli.png)
+![banner-resmi](https://github.com/emhnkrty/uretken/blob/main/public/assets/Uygulama-gorseli2.png)
+![banner-resmi](https://github.com/emhnkrty/uretken/blob/main/public/assets/Uygulama-gorseli3.png)
+![banner-resmi](https://github.com/emhnkrty/uretken/blob/main/public/assets/Uygulama-gorseli4.png)
 
 ## Başlangıç
 Projeyi klonlayın:
