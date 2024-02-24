@@ -1,70 +1,58 @@
-# Getting Started with Create React App
+# Bursa Nöbetçi Eczaneler Uygulaması
+Bu proje, Bursa şehrindeki nöbetçi eczaneleri görüntülemek, harita üzerinde göstermek ve sağlık ile ilgili faydalı bilgiler sunmak için geliştirilmiştir.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Başlangıç
+Projeyi klonlayın:
+git clone https://github.com/emhnkrty/uretken.git
 
-## Available Scripts
+## Proje Dizinine Gidin:
+cd my-app 
+Gerekli bağımlılıkları yükleyin:
+npm install
 
-In the project directory, you can run:
 
-### `npm start`
+## ÖNEMLİ !!!
+APİ aracılığı ile nöbetçi eczaneleri çekmeye çalıştığımızda sunucu taraflı CORS hatası aldığımız için aşağıdaki gibi bi çözüm ürettim.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+const fetchNobetBelediyeData = async () => {
+            try {
+                const response = await fetch('https://cors-anywhere.herokuapp.com/https://www.beo.org.tr/nobet-belediye', {
+                    method: 'GET',
+                    mode: 'cors', 
+                });
+        
+                if (!response.ok) {
+                    throw new Error('API isteği sırasında hata oluştu:', response.statusText);
+                }
+        
+                const responseData = await response.text();
+                const jsonData = JSON.parse(responseData);
+                setNightPharmacies(jsonData);
+            } catch (error) {
+                setNightPharmacies(Data);
+                console.error('API isteği sırasında hata oluştu:', error);
+            }
+};
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+APİ'den veri gelebilmesi için "CORS Unblock" crome eklentisi yüklü olmalıdır. Aksi takdirde CORS hatası alınır.
+Bu geçici çözümle herzaman çalışmadığından kaynaklı APİ isteği başarısız olursa nöbetçi eczaneler proje içerisindeki Data.js'den alınmıştır. Apiden çekilmediği için güncel nöbetçi eczaneleri içermemektedir.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Uygulamayı Başlatın:
+npm start
+Tarayıcınızda http://localhost:3000 adresine giderek uygulamayı görüntüleyebilirsiniz.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Proje Hakkında
+Bu proje, Bursa'daki nöbetçi eczaneleri görsel olarak kullanıcılara sunar. Google map aracılığı ile nöbetçi eczaneler haritada gösterilir. Kullanıcılar ayrıca nöbetçi eczanelerle ilgili bilgileri whatsapp , sms ve bağlantıyı kopyalama seçenekleriyle paylaşabilirler. Proje de sağlık ile ilgili faydalı bilgiler de kullanıcıya sunulmaktadır.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Kullanılan Veri Seti
+https://acikyesil.bursa.bel.tr/dataset/nobet-eczane
+Proje, Bursa'nın nöbetçi eczanelerini içeren (https://www.beo.org.tr/nobet-belediye) veri setini kullanır.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Lisans
+Bu proje MIT lisansı altında lisanslanmıştır. Daha fazla bilgi için LICENSE dosyasına bakın.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
