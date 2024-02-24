@@ -1,23 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { HashRouter, Routes, Route } from "react-router-dom";
+import Header from "./components/header/Header";
+import Footer from "./components/footer/Footer";
+import { NightPharmaciesScreen } from "./screens/NightPharmaciesScreen";
+import "bootstrap/dist/css/bootstrap.min.css";
+import UsefulInformation from './components/header/UsefulInformation';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <HashRouter>
+        <Header/>
+        <Routes>
+          <Route path="/" element={<NightPharmaciesScreen />} />
+          <Route path="/faydalibilgiler" element={<UsefulInformation />} />
+        </Routes>
+        <Footer/>
+      </HashRouter>
     </div>
   );
 }

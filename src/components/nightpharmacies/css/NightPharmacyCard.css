@@ -1,0 +1,116 @@
+.night-pharmacy-card {
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Hafif bir gölge efekti */
+
+    align-items: stretch;
+    background: #fff;
+    border-radius: 8px;
+    flex-direction: row;
+    height: 290px;
+    margin-bottom: 20px;
+    margin-top:20px;
+    min-height: 88px;
+    padding: 14px;
+    width: 100%;
+}
+
+
+.night-pharmacy-name {
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    color: #b51c1c;
+    cursor: pointer;
+    display: -webkit-box;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    letter-spacing: .023em;
+    line-height: 19px;
+    margin-bottom: 7px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+}
+
+.night-pharmacy-details {
+    margin-top: 10px;
+}
+
+.night-pharmacy-details>p {
+    margin: 5px 0;
+}
+
+.night-pharmacy-details>p strong {
+    font-weight: bold;
+}
+
+@media (min-width: 1441px) {
+    .night-pharmacy-card:nth-child(2n+1) {
+        margin-right: unset !important;
+    }
+
+    .night-pharmacy-card:nth-child(3n+2) {
+        margin-right: 25px !important;
+        margin-left: 25px !important;
+    }
+
+    .night-pharmacy-card {
+        max-width: 400px;
+    }
+}
+@media (max-width: 1441px) {
+    .night-pharmacy-card {
+        margin-right: 20px;
+    }
+
+}
+
+.night-pharmacy-info{
+    display: flex;
+    font-size: 15px!important;
+    height: auto;
+    margin-bottom: 10px;
+    padding:3px;
+    border-radius: 5px;
+    
+}
+
+.night-pharmacy-info svg{
+    margin-right:6px;
+    color:#16347d;
+    margin-top:4px;
+}
+
+.night-pharmacy-info .district{
+    padding: 5px;
+    background-color: #61dafb;
+    border-radius: 5px;
+    color: white;
+    opacity: 0.7;
+    border: 1px solid #1384a3;
+    font-weight: 600;
+}
+
+/* .night-pharmacy-info .show-in-map{
+    font-weight: 500;
+    text-decoration-line: underline;
+    color: #03259a;
+} */
+
+.night-pharmacy-info .btn{
+    padding: 5px !important;
+    background-color: #61dafb !important;
+    border-radius: 5px !important;
+    color: white !important;
+    border: 1px solid #1384a3 !important;
+    font-weight: 600 !important;
+}
+
+.pharmacy-img{
+    width:70px;
+    height:70px;
+    margin-right: 12px;
+    margin-top: 11px;
+}
