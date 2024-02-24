@@ -1,4 +1,4 @@
-##VERCEL LİNKİ:
+## VERCEL LİNKİ:
 https://uretken-akademi-bitirme-projesi-two.vercel.app/
 
 ## Bursa Nöbetçi Eczaneler Uygulaması
