@@ -14,7 +14,7 @@ npm install
 ## ÖNEMLİ !!!
 APİ aracılığı ile nöbetçi eczaneleri çekmeye çalıştığımızda sunucu taraflı CORS hatası aldığımız için aşağıdaki gibi bi çözüm ürettim.
 
-const fetchNobetBelediyeData = async () => {
+`const fetchNobetBelediyeData = async () => {
             try {
                 const response = await fetch('https://cors-anywhere.herokuapp.com/https://www.beo.org.tr/nobet-belediye', {
                     method: 'GET',
@@ -32,7 +32,7 @@ const fetchNobetBelediyeData = async () => {
                 setNightPharmacies(Data);
                 console.error('API isteği sırasında hata oluştu:', error);
             }
-};
+}; `
 
 
 
