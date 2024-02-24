@@ -1,4 +1,7 @@
-# Bursa Nöbetçi Eczaneler Uygulaması
+##VERCEL LİNKİ:
+https://uretken-akademi-bitirme-projesi-two.vercel.app/
+
+## Bursa Nöbetçi Eczaneler Uygulaması
 Bu proje, Bursa şehrindeki nöbetçi eczaneleri görüntülemek, harita üzerinde göstermek ve sağlık ile ilgili faydalı bilgiler sunmak için geliştirilmiştir.
 ![banner-resmi](https://github.com/emhnkrty/uretken/blob/main/public/assets/Uygulama-gorseli.png)
 ![banner-resmi](https://github.com/emhnkrty/uretken/blob/main/public/assets/Uygulama-gorseli2.png)
